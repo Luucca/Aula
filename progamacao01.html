@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java </title>
+    <style>
+        .ares{
+            background: rgb(172, 7, 7);
+            color: white;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: normal 20pt arial;
+            border-radius: 100%;
+          
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ares">
+        Entre em mim!
+    </div>
+          
+
+    <script>
+
+     
+ var area = document.querySelector('.ares');
+
+ area . addEventListener('click', clicar)
+ area . addEventListener('mouseenter', Entrou)
+ area . addEventListener('mouseout', Saiu)
+
+        function clicar(){
+            
+           
+            area.style.background = 'green'
+            area.style.color = 'white'
+            area.innerHTML = 'Clicou!'
+        }
+        function Entrou(){
+            area.style.background ='rgb(172, 7, 7)'
+            area.innerHTML ='Entrou!'
+            area.style.color = 'white'
+        }
+        function Saiu(){
+
+            area.innerHTML ='Saiu!'
+            area.style.background ='rgb(142, 1, 17)'
+            area.style.color = 'white'
+
+
+        }
+
+    </script>
+</body>
+</html>

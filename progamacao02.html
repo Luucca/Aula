@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ .calculo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   background: gray;
+   width: 100%;
+   height: 100px;
+   max-width: 500px;
+   margin: auto;
+   border-radius: 20px;
+
+
+ }
+
+ .resultado{
+  text-align: center;
+
+ }
+</style>
+<body>
+
+        <div class="calculo">
+
+        <input type="number" name="numero" id="numero01"> +
+        <input type="number" name="numero" id="numero02">
+        <button class="button" onclick="somar()">Somar</button>
+    </div> 
+
+     
+
+    <div class="resultado">
+            
+    </div>
+    <script>
+
+  
+      function somar(){
+
+        var nome = document.querySelector('#numero01');
+        var nome02 = document.querySelector('#numero02')
+
+        var nul = Number(nome.value)
+        var nul02 = Number(nome02.value)
+
+        resul = nul + nul02;
+
+        var resultado = document.querySelector('.resultado')
+        
+        
+        resultado.innerHTML= `O resultado é ${resul}`; 
+
+      }
+
+
+
+
+
+    </script>
+
+ 
+</body>
+</html>

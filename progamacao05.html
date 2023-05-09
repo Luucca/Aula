@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha?</title>
+
+    
+</head>
+<body>
+    <main>
+      <h3>Que número estou Pensando?</h3>
+     
+     
+     <div class="o">
+       
+      <input type="number"  class="input">
+      <button class="button" onclick="resultar()">Mostrar</button>
+     </div>
+     
+   
+     <div class="text">
+      Você terá outra chance!
+     </div>
+   </main>
+   <script>
+      function resultar(){
+
+       var input = document.querySelector('.input')
+
+       var número = Number(input.value);
+
+       var text = document.querySelector('.text')
+      
+      if(número ==  valor ){
+          text.innerHTML='Você acertou!'
+         }else{
+            text.innerHTML='Você errou!'
+         }
+      
+         
+      }
+      var valor = Math.floor(Math.random() * 10)
+   </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+  <main>
+    <h1>Informe sua Velocidade</h1>
+    <div class="velocidade">
+     <h4>Km/Hr:</h4>
+     <input type="number" class="valor">
+     <button class="button" onclick="clicou()"><strong>Resultado</strong></button>
+     </div>
+     <div class="resultado">Vamos calcular...</div>
+  
+  </main>   
+  <script>
+      function clicou(){
+
+       var nul = document.querySelector('.valor')
+
+       var valor = Number(nul.value);
+
+       var resul = document.querySelector('.resultado')
+
+       if (valor < 41){
+        resul.innerHTML='Você não ultrapassou o limite! Parabéns!'
+         
+
+       }else{
+
+        resul.innerHTML='Você ultrapassou o limite!'
+       }
+
+
+
+
+
+
+
+
+
+
+      }
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

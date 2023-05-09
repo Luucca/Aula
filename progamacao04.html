@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java </title>
+    
+</head>
+<body>
+    <h1>Que número estou pensando? </h1>
+    
+        <h4>Digite o número:</h4><input type="number" name="" class="escrita">
+        <button onclick="resultar()" class="button">Mostrar</button>
+       
+        <div class="o"> Pensando....</div>
+    <script>
+
+       
+       function resultar(){
+
+            var escrol = document.querySelector('.escrita');
+
+       var escl = Number(escrol.value);
+
+       if(escl == 80){
+
+          dive.innerHTML='Você acertou!'
+
+
+
+
+       }else{
+        
+        if(escl <=79 ){ 
+        
+        dive.innerHTML=`O número ${escl} é menor. Tente outro!`
+
+          
+       }else{
+        
+            dive.innerHTML=`O número ${escl} é maior. Tente outro!`
+       }
+    }
+       
+
+        
+
+
+
+       }
+
+
+
+
+
+        var dive = document.querySelector('.o')
+    </script>
+</body>
+</html>
