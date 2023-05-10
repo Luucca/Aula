@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link rel="stylesheet" href="01.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nixie One', cursive;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time{
+    background: rgba(3, 3, 3, 0.555);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+}
+h1{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 50px;
+}
+.hora{
+    width: 500px;
+    height: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 35px;
+    border-radius: 100px;
+    border: none;
+    margin-bottom: 10px;
+}
+.selection{
+    width: 500px;
+    height: 50px;
+    font-size: 35px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+.selection:active{
+    background: rgb(228, 228, 228);
+}
+.all{
+    font-size: 25px;
+    font-family: sans-serif;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="time">
+         <h1>Informe seu horário atual:</h1>
+         <input type="time" class="hora">
+         <button class="selection">Mostrar</button>
+         <div class="all"></div>
+        </div>
+        <script>
+            
+var button = document.querySelector('.selection')
+button.addEventListener('click', Mostrar)
+
+function Mostrar(){
+  
+    var valor = document.querySelector('.hora')
+    var time = String(valor.value)
+    
+    if(time >= '00:00' && time <= '12:00'){
+      time = 'Bom dia!'
+    }else if(time >= '12:01' && time <= '18:00'){
+        time = 'Boa tarde!'
+    }else if(time >= '18:01' && time <= '23:59'){
+        time = 'Boa noite!'
+    }
+ 
+
+var text = document.querySelector('.all')
+text.innerHTML=`${time}`
+}
+
+        </script>
+    </main>
+</body>
+</html>
