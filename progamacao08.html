@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="py-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        div{
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+           align-items: center;
+           gap: 5px;
+        }
+    </style>
+</head>
+<body> 
+    <div>
+       <input type="text" class="Name">
+       <input type="password" class="Password">
+       <button class="Login">Mostrar</button>
+    </div>
+
+<script>
+  var Name  = document.querySelector ( '.Name' )
+        var Password = document.querySelector ( '.Password ' )
+        
+         var Login = document.querySelector ( '.Login' )
+         Login.addEventListener ( 'click' , Mostrar )
+          
+          function Mostrar () {
+        
+            let Dados = [ Name , Password ]
+        
+            Name.value = null
+            Password.value = null 
+         
+        
+        
+          }
+</script>
+</body>
+</html>
+
+    
